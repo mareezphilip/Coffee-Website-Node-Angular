@@ -8,7 +8,7 @@
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.3) !important;
 }
 .text-brown{
-    color: rgb(58, 43, 23) !important;
+    color: rgb(58, 43, 23);
     font-weight:bolder;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }

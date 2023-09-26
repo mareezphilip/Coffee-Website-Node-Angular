@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.text-brown{
+    color: rgb(105, 78, 43);
+    font-weight:bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.text-brown-light{
+    color: rgb(105, 78, 43);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

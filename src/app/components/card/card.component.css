@@ -1,0 +1,15 @@
+.imgdiv{
+    width: 130px;
+    height: 130px;
+    background-color: #e4e1dc;
+    overflow: hidden;
+}
+/* .carddiv{
+    width:17%
+} */
+img{
+    width: 111%;
+    position: absolute;
+    top: 19%;
+    right: -3%;
+}

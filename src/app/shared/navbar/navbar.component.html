@@ -8,17 +8,18 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item ">
-            <a class="nav-link active fs-5 text-brown" aria-current="page" routerLinkActive="text-danger" routerLink= "" >Home</a>
+            <a class="nav-link active fs-5 text-brown" aria-current="page" routerLinkActive="text-white" routerLink= "" [routerLinkActiveOptions]="{'exact' :  true}">Home</a>
           </li>
           <li class="nav-item mx-5">
-            <a class="nav-link fs-5 text-brown " routerLink="about" routerLinkActive="text-danger" >About</a>
+            <a class="nav-link fs-5 text-brown " routerLink="about" routerLinkActive="text-white" >About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-5 text-brown" routerLink="review" routerLinkActive="text-danger" >Review</a>
+            <a class="nav-link fs-5 text-brown" routerLink="review" routerLinkActive="text-white" >Review</a>
           </li>
         
           
         </ul>
+        <i class="fa-solid fa-cart-shopping fs-3 me-3" style="color: rgb(75, 56, 30)"></i>
         <button class="Logout-btn px-4 py-2  text-brown fs-6"> Log Out</button>
      <!-- <li> <i class="fa-solid fa-house"></i></li> -->
       </div>
