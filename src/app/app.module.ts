@@ -15,6 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ShowproductComponent } from './pages/showproduct/showproduct.component';
 
 
 
@@ -33,6 +34,7 @@ import { ProductsComponent } from './components/products/products.component';
     CardComponent,
     SidebarComponent,
     ProductsComponent,
+    ShowproductComponent,
    
     
   ],

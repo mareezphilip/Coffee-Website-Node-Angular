@@ -1,0 +1,27 @@
+<div class="bg">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <img src="http://localhost:5000{{product.images}}" class="ms-3"  >
+             </div>
+            <div class="col-4"> 
+                <h2 class="text-brown pb-3"> {{product.title |titlecase}} </h2>
+
+                <p class="text-brown-light"> Description </p>
+                <p class=" text-brown-light descp p-4"> {{product.description}}</p>
+
+                <div class="d-flex">
+                 <span class="text-brown-light fs-6 align-self-center"> Price </span>
+                 <p class=" text-brown-light descp p-1 align-self-center"> {{product.price}} LE </p>
+                </div>
+              
+
+            </div>
+            <div class="col-3"> 
+                button
+            </div>
+        </div>
+    </div>
+ 
+</div>

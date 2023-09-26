@@ -1,0 +1,18 @@
+.bg{
+    min-height: 100vh;
+    padding-top: 6rem;
+     background-image: url('/assets/images/productbg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+img{
+    width: 80%;
+}
+h2{
+    border-bottom: 4px solid rgb(105, 78, 43); ;
+    width: 40%;
+}
+.descp{
+    border : 1px solid rgb(105, 78, 43) ;
+    border-radius: 7px;
+}

@@ -16,6 +16,9 @@ export class GlobalserviceService {
    getproductsbycategory(category:any):Observable<any>{
     return this.http.get(`http://localhost:5000/products/specificCategory/${category}`) 
    }
+   getproductinfo(id:any):Observable<any>{
+    return this.http.get(`http://localhost:5000/products/showSingleProduct/${id}`)
+   }
 
 }
 
