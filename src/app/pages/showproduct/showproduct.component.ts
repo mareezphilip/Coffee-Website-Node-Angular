@@ -15,6 +15,7 @@ export class ShowproductComponent {
   
   productid :any
   product :any
+  quantity:number = 1
   ngOnInit(){
   this.activate.paramMap.subscribe(param=>{
     this.productid=param.get('productid')

@@ -11,17 +11,28 @@
                 <p class="text-brown-light"> Description </p>
                 <p class=" text-brown-light descp p-4"> {{product.description}}</p>
 
-                <div class="d-flex">
-                 <span class="text-brown-light fs-6 align-self-center"> Price </span>
-                 <p class=" text-brown-light descp p-1 align-self-center"> {{product.price}} LE </p>
-                </div>
+                
+                 <span class="text-brown fs-6 align-self-center d-inline-block me-6"> Price : </span>
+                 <span class="text-brown-light descp p-1 align-self-center d-inline-block ms-6 "> {{product.price}} LE </span>
+                
               
+                <p class="text-brown"> Quantity </p>
+                <div class=""> 
+                   <button class="plusbtn"> + </button>
+                   <span class="mx-3 fs-5 "> {{quantity}}</span>
+                   <button class="plusbtn"> - </button>
+                    
+                </div>
+
+
+                <button class=" mt-4 btn rounded-pill orderbtn px-3 py-2"> Add to Order </button>
 
             </div>
             <div class="col-3"> 
-                button
+                <img src="assets/images/coffee.png" class="imgcoffee">
             </div>
         </div>
     </div>
  
 </div>
+

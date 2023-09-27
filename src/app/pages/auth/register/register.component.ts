@@ -14,13 +14,13 @@ export class RegisterComponent {
   }
   model : RegisterInterface =
   { 
-    fName:'',
-   lName:'',
-    email:'',
-    password:'',
-    countryCode:'',
-    phone:'',
-    gender:'',
+    fName:"",
+   lName:"",
+    email:"",
+    password:"",
+    countryCode:"",
+    phone:"",
+    gender:"",
     // dOfBirth:new Date() ,
     // addresses :{
     // addrType:'',
@@ -29,18 +29,19 @@ export class RegisterComponent {
   }
   handleregister(form : NgForm){
     console.log(this.model)
-if(form.valid){
-  this.service.AddUser(this.model).subscribe(res=>{
+
+   this.service.AddUser(this.model).subscribe(res=>{
     console.log(res)
   })
 
+
 }
-else{
-  console.log(form)
+
   
-}
+  
+
 
 
   }
 
-}
+
