@@ -1,1 +1,67 @@
-<p>register works!</p>
+<form #registerForm="ngForm"  class=" "(ngSubmit)="handleregister(registerForm)" >
+  <!-- firstname -->
+  <div class="mb-3  w-85 m-auto ">
+    <label for="exampleInputfName1" class="form-label text-brown">First Name</label>
+
+    <input [(ngModel)]="model.fName" #fName="ngModel" name="fName" type="text" required class="
+      no-outline w-100 rounded-2 py-1" id="exampleInputfName1" >
+
+  </div>
+  <!-- lName -->
+  <div class="mb-3  w-85 m-auto ">
+    <label for="exampleInputlName" class="form-label text-brown">Last Name</label>
+
+    <input [(ngModel)]="model.lName" #lName="ngModel" name="lName" type="text" required class="
+        no-outline w-100 rounded-2 py-1" id="exampleInputlName" >
+
+  </div>
+  <!-- email  -->
+  <div class="mb-3 w-85 m-auto">
+    <label for="exampleInputEmail" class="form-label text-brown">Email</label>
+    <input type="email" [(ngModel)]="model.email" name="email" email required class=" no-outline w-100 rounded-2 py-1
+      " id="exampleInputEmail" #email="ngModel">
+  </div>
+  <!-- password -->
+  <div class="mb-3 w-85 m-auto">
+    <label for="exampleInputPassword" class="form-label text-brown">Password</label>
+    <input type="password" [(ngModel)]="model.password" name="password" required class=" no-outline w-100 rounded-2 py-1
+        " id="exampleInputPassword" pattern="/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/" #password="ngModel">
+  </div>
+  <!-- gender -->
+  <div class="mb-3  w-85 m-auto ">
+    <label for="Female " class="form-label text-brown me-3">Gender :</label>
+
+    <input type="radio" name="gender" value="Female" id="Female" [(ngModel)]="model.gender">
+    <label for="Female " class="form-label text-brown-light me-3">Female</label>
+    <input type="radio" id="Male" name="gender" value="Male" [(ngModel)]="model.gender">
+    <label for="Male" class="form-label text-brown-light">Male</label>
+  </div>
+  <!-- dOfBirth -->
+  <!-- <div class="mb-3  w-85 m-auto ">
+    <label for="dOfBirth" class="form-label text-brown">Date of Birthday:</label>
+    <input type="date" name="dOfBirth" id="dOfBirth" [(ngModel)]="model.dOfBirth" class="rounded-2 ms-3 w-75">
+
+  </div> -->
+
+  <!-- addresses -->
+  <!-- <div class="mb-3  w-85 m-auto" ngModelGroup="addresses" >
+    <label for="addrType"> Address Type</label>
+    <input type="text" name="addrType" [(ngModel)]="model.addresses.addrType" id="addrType">
+    <label for="addrDetails"> Address Details</label>
+    <input type="text" name="addrDetails" [(ngModel)]="model.addresses.addrDetails" id="addrDetails">
+
+  </div> -->
+  <!-- phone -->
+  <div class="mb-3  w-85 m-auto ">
+    <label for="CountryCode" class="form-label text-brown">Country Code </label>
+    <input type="text" name="countryCode"   class="mb-3
+    no-outline w-100 rounded-2 py-1" [(ngModel)]="model.countryCode" id="CountryCode">
+    <label for="phone" class="form-label text-brown">Phone Number </label>
+    <input type="text" name="countryCode"  class="
+    no-outline w-100 rounded-2 py-1" [(ngModel)]="model.phone" id="phone">
+
+  </div>
+
+  <button type="submit" class="btn  log px-4 ms-5 mt-3 ">Register</button>
+
+</form>
