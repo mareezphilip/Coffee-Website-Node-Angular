@@ -18,14 +18,14 @@
               
                 <p class="text-brown"> Quantity </p>
                 <div class=""> 
-                   <button class="plusbtn"> + </button>
+                   <button class="plusbtn" (click)="increaseQuantity()"> + </button>
                    <span class="mx-3 fs-5 "> {{quantity}}</span>
-                   <button class="plusbtn"> - </button>
+                   <button class="plusbtn" (click)="decreaseQuantity()"> - </button>
                     
                 </div>
 
 
-                <button class=" mt-4 btn rounded-pill orderbtn px-3 py-2"> Add to Order </button>
+                <button class=" mt-4 btn rounded-pill orderbtn px-3 py-2" (click)="handleorder()"> Add to Order </button>
 
             </div>
             <div class="col-3"> 

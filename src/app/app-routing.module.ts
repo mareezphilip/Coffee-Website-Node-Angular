@@ -7,6 +7,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ShowproductComponent } from './pages/showproduct/showproduct.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { AuthpagesComponent } from './pages/authpages/authpages.component';
+import { ErrorComponent } from './pages/error/error.component';
+import { DashboardComponent } from './adminpages/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:"products/:category" , component:HomeComponent},
   {path:"products/:category/:productid" , component:ShowproductComponent},
   {path:"auth",component:AuthpagesComponent},
+  {path:"error" , component:ErrorComponent},
+  {path:"dashboard" , component:DashboardComponent}
   
 
 ];

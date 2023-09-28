@@ -21,18 +21,25 @@ export class RegisterComponent {
     countryCode:"",
     phone:"",
     gender:"",
-    // dOfBirth:new Date() ,
-    // addresses :{
-    // addrType:'',
-    // addrDetails :''
-    // }
+    dOfBirth:new Date() ,
+    addresses :{
+    addrType:'',
+     addrDetails :''
+     }
   }
   handleregister(form : NgForm){
     console.log(this.model)
+    if(form.valid){
+        this.service.AddUser(this.model).subscribe(res=>{
+            console.log(res)
+          })
+        console.log("ana fel if")
+    }
+    else{
+        console.log("ana fe el elsee ")
+        console.log(form)
+    }
 
-   this.service.AddUser(this.model).subscribe(res=>{
-    console.log(res)
-  })
 
 
 }

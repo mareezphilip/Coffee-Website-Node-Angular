@@ -32,6 +32,10 @@ export class GlobalserviceService {
 
     return this.http.post("http://localhost:5000/users/add",obj)
      }
+
+     addtocart(obj:any){
+      return this.http.post("http://localhost:5000/carts/addtocart" , obj)
+     }
 }
 
 

@@ -1,5 +1,5 @@
 import { Component , OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute , Router } from '@angular/router';
 import { GlobalserviceService } from 'src/app/services/globalservice.service';
 
 
@@ -10,9 +10,10 @@ import { GlobalserviceService } from 'src/app/services/globalservice.service';
 })
 export class ProductsComponent {
 
-  constructor(private activate:ActivatedRoute , private service:GlobalserviceService ){}
+  constructor(private activate:ActivatedRoute , private service:GlobalserviceService ,private router: Router ){}
   category : any =""
   products :any
+  loading = true
   p :any = "mareeeeeez"
   ngOnInit(){
   this.activate.paramMap.subscribe(param=>{
@@ -22,7 +23,16 @@ export class ProductsComponent {
       console.log(res)
       this.products =res.data
       
-    })
+    }
+     , (error)=>{
+      this.router.navigateByUrl("error")
+      console.log(error)
+     },
+     ()=>{
+         this.loading=false
+     }
+    )
+
   })
  
 }

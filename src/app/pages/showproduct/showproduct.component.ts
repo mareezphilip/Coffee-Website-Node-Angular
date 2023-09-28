@@ -29,4 +29,19 @@ export class ShowproductComponent {
  
 }
 
+increaseQuantity(){
+  this.quantity+=1
+}
+decreaseQuantity(){
+ this.quantity-=1
+}
+
+handleorder(){
+  let obj = {products: [{productid:this.product._id , quantity :this.quantity}]}
+  console.log(obj)
+  this.service.addtocart(obj).subscribe(res=>{
+    console.log(res)
+  })
+}
+
 }

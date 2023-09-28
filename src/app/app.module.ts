@@ -19,7 +19,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthpagesComponent } from './pages/authpages/authpages.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { ErrorComponent } from './pages/error/error.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
+
+import { provideToastr } from 'ngx-toastr';
+import { DashboardComponent } from './adminpages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +46,8 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     ProductsComponent,
     ShowproductComponent,
     AuthpagesComponent,
+    ErrorComponent,
+    DashboardComponent,
    
     
   ],
@@ -45,13 +55,16 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), 
   ],
   providers: [
     {
       provide : HTTP_INTERCEPTORS ,
       useClass : AuthInterceptor ,
-      multi : true
+      multi : true,
+     
     }
 
   ],

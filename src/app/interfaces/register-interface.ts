@@ -5,10 +5,13 @@ export interface RegisterInterface {
     lName:string,
     countryCode:string,
     phone:string,
-    gender?:string,
-    // dOfBirth?:Date ,
-    // addresses ?:{
-    //     addrType:string,
-    //     addrDetails :string
-    // }
+    gender:string,
+     dOfBirth?:Date ,
+     addresses :{
+      addrType:string,
+      addrDetails :string
+    }
 }
+
+   
+

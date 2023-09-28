@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { GlobalserviceService } from 'src/app/services/globalservice.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent {
   result:any
-  constructor(private service:GlobalserviceService ,private router : Router ){
+  constructor(private service:GlobalserviceService ,private router : Router ,private toastr: ToastrService ){
 
 
   }
@@ -32,6 +33,7 @@ export class LoginComponent {
           this.service.userType = this.result.data.userData.userType
         
         this.service.isLogin = true
+        this.toastr.success('logged successfully', 'Toastr fun!');
         this.router.navigateByUrl('')
        }
 
