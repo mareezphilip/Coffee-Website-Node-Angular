@@ -1,3 +1,6 @@
-.h-hv{
-    height: 1000vh !important;
+.bg-brown{
+    background-color: rgb(47, 38, 13);
+    color: white;
+    height: 100vh !important;
+    width: 20%;
 }

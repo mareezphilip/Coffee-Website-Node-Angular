@@ -28,10 +28,11 @@ export class GlobalserviceService {
    }
   
 
-   AddUser(obj:any):Observable<any>{
+ 
+     AddUser(obj:any):Observable<any>{
 
-    return this.http.post("http://localhost:5000/users/add",obj)
-     }
+      return this.http.post("http://localhost:5000/users/add",obj)
+       }
 
      addtocart(obj:any){
       return this.http.post("http://localhost:5000/carts/addtocart" , obj)

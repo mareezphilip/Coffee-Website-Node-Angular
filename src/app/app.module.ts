@@ -28,6 +28,11 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { provideToastr } from 'ngx-toastr';
 import { DashboardComponent } from './adminpages/dashboard/dashboard.component';
+import { AddnewproductComponent } from './adminpages/addnewproduct/addnewproduct.component';
+import { EditProductComponent } from './adminpages/edit-product/edit-product.component';
+import { DeleteproductComponent } from './adminpages/deleteproduct/deleteproduct.component';
+import { AllusersComponent } from './adminpages/allusers/allusers.component';
+import { AddadminComponent } from './adminpages/addadmin/addadmin.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { DashboardComponent } from './adminpages/dashboard/dashboard.component';
     AuthpagesComponent,
     ErrorComponent,
     DashboardComponent,
+    AddnewproductComponent,
+    EditProductComponent,
+    DeleteproductComponent,
+    AllusersComponent,
+    AddadminComponent,
    
     
   ],

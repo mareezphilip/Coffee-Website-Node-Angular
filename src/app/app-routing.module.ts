@@ -9,6 +9,11 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { AuthpagesComponent } from './pages/authpages/authpages.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { DashboardComponent } from './adminpages/dashboard/dashboard.component';
+import { AddnewproductComponent } from './adminpages/addnewproduct/addnewproduct.component';
+import { EditProductComponent } from './adminpages/edit-product/edit-product.component';
+import { DeleteproductComponent } from './adminpages/deleteproduct/deleteproduct.component';
+import { AllusersComponent } from './adminpages/allusers/allusers.component';
+import { AddadminComponent } from './adminpages/addadmin/addadmin.component';
 
 
 const routes: Routes = [
@@ -20,7 +25,18 @@ const routes: Routes = [
   {path:"products/:category/:productid" , component:ShowproductComponent},
   {path:"auth",component:AuthpagesComponent},
   {path:"error" , component:ErrorComponent},
-  {path:"dashboard" , component:DashboardComponent}
+  {path:"dashboard" , component:DashboardComponent},
+  {path:"dashboard/addnewproduct" , component:AddnewproductComponent},
+  {path:"dashboard/editproduct" , component:EditProductComponent},
+  {path:"dashboard/delete" , component:DeleteproductComponent},
+  {path:"dashboard/allusers" , component:AllusersComponent},
+  {path:"dashboard/addadmin" , component:AddadminComponent},
+
+
+
+
+ 
+
   
 
 ];

@@ -1,4 +1,4 @@
-<form #registerForm="ngForm"  class=""(ngSubmit)="handleregister(registerForm)" >
+<form #registerForm="ngForm"  class=" "(ngSubmit)="handleregister(registerForm)" >
   <!-- firstname -->
   <div class="mb-3  w-85 m-auto ">
     <label for="exampleInputfName1" class="form-label text-brown">First Name</label>
@@ -25,7 +25,7 @@
   <div class="mb-3 w-85 m-auto">
     <label for="exampleInputPassword" class="form-label text-brown">Password</label>
     <input type="text" [(ngModel)]="model.password" name="password" required class=" no-outline w-100 rounded-2 py-1
-        " id="exampleInputPassword" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" #password="ngModel">
+        " id="exampleInputPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" #password="ngModel">
   </div>
   <!-- gender -->
   <div class="mb-3  w-85 m-auto ">
