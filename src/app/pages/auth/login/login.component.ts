@@ -30,11 +30,18 @@ export class LoginComponent {
       if(this.result.apiStatus) {
         localStorage.setItem('token' , this.result.data.token)
         localStorage.setItem('type' , this.result.data.userData.userType)
-          this.service.userType = this.result.data.userData.userType
+        this.service.userType = this.result.data.userData.userType
         
         this.service.isLogin = true
-        this.toastr.success('logged successfully', 'Toastr fun!');
-        this.router.navigateByUrl('')
+        this.toastr.success('', 'logged successfully');
+        if(this.result.data.userData.userType=="user"){
+         this.router.navigateByUrl('')
+        }
+        else if(this.result.data.userData.userType=="admin"){
+          console.log(this.service.userType)
+          this.router.navigateByUrl('/dashboard')
+          
+        }
        }
 
     })

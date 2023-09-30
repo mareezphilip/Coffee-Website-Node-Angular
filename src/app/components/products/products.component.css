@@ -1,0 +1,17 @@
+.form-control:focus{
+    outline:  2px solid rgb(49, 49, 12) !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+input{
+    
+    border: 1px solid rgb(49, 49, 12) ;
+}
+.inputdiv{
+    width: 23%;
+}
+i{
+    position: absolute;
+    top: 28%;
+    right: 8.5%;
+}

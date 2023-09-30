@@ -1,0 +1,28 @@
+.bg-review{
+    min-height: 150vh;
+    padding-top: 6rem;
+    /* background-image: url('../assets/images.jpg') ;
+     */
+     
+     background-image: url('/assets/images/5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.reviewstyle{
+    /* width:; */
+    border:.2rem solid #443;
+   
+    border-radius:95% 4% 97% 5% / 4% 94% 3% 95%;
+background-color: transparent;
+font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+img{
+    width: 65%;
+    /* transform: rotate(45deg); */
+}
+
+.reviewstyle:hover{
+    border:.3rem dashed #443;
+    border-radius:4% 95% 6% 5% / 95% 4% 92% 95%;
+}

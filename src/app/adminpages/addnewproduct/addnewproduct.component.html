@@ -1,2 +1,47 @@
 
-<p>ssssssssssss</p>
+<div class="container">
+
+    <form #EditproductForm="ngForm" class=" m-auto w-75 mt-5 pb-3" (ngSubmit)="submitForm(EditproductForm)" >
+          
+        <div class="row">  
+           <label for="category" class="form-label text-brown col-3"> Category  : </label>
+           <select [(ngModel)]="model.category" name="category" id="category" class="form-contol col-4 ">
+               <option *ngFor="let category of categories" value="{{category}}">{{category}}</option>
+           </select>
+         </div>
+        
+       <div class="my-2">
+         <label for="title" class="form-label text-brown">Title</label>
+   
+       <input [(ngModel)]="model.title" #title="ngModel" name="title" type="text" required class="
+               no-outline w-100 rounded-2 py-1" id="title" >
+       </div>
+       
+   
+    
+       <div class="my-2">
+          <label for="description" class="form-label text-brown">Description</label>
+   
+       <input [(ngModel)]="model.description" #description="ngModel" name="description" type="text" required class="
+               no-outline w-100 rounded-2 py-1" id="description" >
+   
+    
+       </div>
+      
+
+       <div class="my-2">
+         <label for="price" class="form-label text-brown">price</label>
+   
+       <input [(ngModel)]="model.price" #price="ngModel" name="price" type="text" required class="
+               no-outline w-100 rounded-2 py-1" id="price" >
+     
+   
+       </div>
+       
+     <div class="my-4 row">
+       <label for="imageUpload" class="text-brown col-auto">Select an image:</label>
+       <input type="file" id="imageUpload" class="form-contol col-auto" (change)="onImageSelected($event)" [(ngModel)]="model.images" name="images" >
+     </div>
+     <button type="submit" class="addbtn rounded-pill px-4 py-2"> Add product</button>
+   </form>
+</div>

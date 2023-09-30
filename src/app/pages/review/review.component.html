@@ -1,1 +1,46 @@
-<p>review works!</p>
+
+
+<div class="reviews bg-review">
+    <div class="container row mx-auto ">
+  
+      <div class="col-7 ">
+        <h2 class="text-brown  pb-5"> Customer Reviews</h2>
+        <img src="assets/images/ss.png" alt="" class="">
+      </div>
+  
+      <div class="col-5 ">
+  
+  
+        <div *ngFor="let review of allreviews" class="mx-auto">
+          <p>{{review.index}}</p>
+          <div class=" my-auto reviewstyle pb-3 mb-3 ps-3 reviewDescription row">
+            <i class="fa-solid fa-circle-user fs-1 mt-3 col-2" style="color: #353810;"></i>
+            <div class="col-9">
+              <p class="text-brown-light ">My Review is : {{ review.reviewDescription }}</p>
+  
+              <div class="text-brown-light d-flex "><strong>Rating:</strong>
+  
+                <div *ngFor="let item of [].constructor(review.rate); let i = index">
+  
+                  <i class="fa-solid fa-star" style="color: #513f1f;">
+                  </i>
+                </div>
+                <div *ngFor="let item of [].constructor(5-review.rate); let i = index">
+                  <i class="fa-regular fa-star" style="color: #513f1f;">
+                  </i>
+                </div>
+  
+  
+  
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <app-addreview ></app-addreview>
+  
+  </div>

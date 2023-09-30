@@ -1,1 +1,104 @@
-<p>edit-product works!</p>
+<div class="container"> 
+  <div class="py-3"> 
+      <h1 class="text-brown"> All Products </h1>
+  </div>
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products , let i = index" >
+        <td scope="row" class="thimg"> <div class="imgdiv"> <img src="http://localhost:5000{{product.images}}" class=" w-75 h-75"> </div> </td>
+        <td class="w-10">{{product.title}}</td>
+        <td class="w-40">{{product.description}}</td>
+        <td class="w-10">{{product.price}} LE</td>
+        <td>{{product.category}}</td>
+        <td> <button type="button" class="deletebtn rounded-pill px-4 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" (click)="handleEdit(i)"> Edit</button> </td>
+        <td> <button class="deletebtn rounded-pill px-4 py-2" (click)="handledelete(i)"> Delete</button></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" *ngIf="edit" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="w-75 m-auto row justify-content-between">
+          <h1 class="modal-title fs-5 text-brown ms-3" id="exampleModalLabel" >Edit Product </h1>
+
+        </div>
+        <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        
+      </div>
+      <div class="modal-body">
+        <form #EditproductForm="ngForm" class=" m-auto w-75 mt-5 pb-3" (ngSubmit)="submitForm(EditproductForm)" >
+          
+           <div class="row">  
+              <label for="category" class="form-label text-brown col-3"> Category  : </label>
+              <select [(ngModel)]="model.category" name="category" id="category" class="form-contol col-4 ">
+                  <option  value="{{singleproductinfo.category}}" selected> {{singleproductinfo.category}}</option>
+                  <option *ngFor="let category of categories" value="{{category}}">{{category}}</option>
+              </select>
+            </div>
+           
+          <div class="my-2">
+            <label for="title" class="form-label text-brown">Title</label>
+      
+          <input [(ngModel)]="model.title" #title="ngModel" name="title" type="text" required class="
+                  no-outline w-100 rounded-2 py-1" id="title" value="{{singleproductinfo.title}}">
+          </div>
+          
+      
+       
+          <div class="my-2">
+             <label for="description" class="form-label text-brown">Description</label>
+      
+          <input [(ngModel)]="model.description" #description="ngModel" name="description" type="text" required class="
+                  no-outline w-100 rounded-2 py-1" id="description" value="{{singleproductinfo.description}}">
+      
+       
+          </div>
+         
+
+          <div class="my-2">
+            <label for="price" class="form-label text-brown">price</label>
+      
+          <input [(ngModel)]="model.price" #price="ngModel" name="price" type="text" required class="
+                  no-outline w-100 rounded-2 py-1" id="price" value="{{singleproductinfo.price}}">
+        
+      
+          </div>
+          
+        <div class="my-4 row">
+          <label for="imageUpload" class="text-brown col-auto">Select an image:</label>
+          <input type="file" id="imageUpload" class="form-contol col-auto" (change)="onImageSelected($event)" [(ngModel)]="model.images" name="images" >
+        </div>
+        <button type="submit" class="deletebtn rounded-pill px-4 py-2"> Edit product</button>
+      </form>
+      </div>
+
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+

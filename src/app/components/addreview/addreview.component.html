@@ -1,0 +1,23 @@
+<form #addreview="ngForm" class="p-5 m-auto w-50 mt-5 mb-5 reviewstyle " (ngSubmit)="submitForm(addreview) ">
+    <div class="mb-3  w-85 m-auto ">
+      <input [(ngModel)]="model.reviewDescription" #reviewDescription="ngModel" name="reviewDescription" type="text"
+         class="no-outline w-100 rounded-2 py-1" placeholder="Add your review">
+       
+    </div>
+    <div class="mb-3  w-85 m-auto ">
+      <label for="rate" class="text-brown">Rate</label>
+  
+      <select name="rate" [(ngModel)]="model.rate" #rate="ngModel"  class="
+              no-outline w-100 rounded-2 py-1" id="rate">
+        <option value="1" class="text-brown-light">1</option>
+        <option value="2" class="text-brown-light">2</option>
+        <option value="3" class="text-brown-light">3</option>
+        <option value="4" class="text-brown-light">4</option>
+        <option value="5" class="text-brown-light">5</option>
+      </select>
+    </div>
+  
+  
+  
+    <button type="submit" class="rounded-2 p-2">Add Review</button>
+  </form>

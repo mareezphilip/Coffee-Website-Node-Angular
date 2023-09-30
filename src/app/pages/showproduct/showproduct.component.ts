@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GlobalserviceService } from 'src/app/services/globalservice.service';
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-showproduct',
@@ -11,7 +11,7 @@ import { GlobalserviceService } from 'src/app/services/globalservice.service';
 
 export class ShowproductComponent {
 
-  constructor(private activate:ActivatedRoute , private service:GlobalserviceService ){}
+  constructor(private activate:ActivatedRoute , private service:GlobalserviceService , private toastr:ToastrService ){}
   
   productid :any
   product :any
@@ -41,6 +41,8 @@ handleorder(){
   console.log(obj)
   this.service.addtocart(obj).subscribe(res=>{
     console.log(res)
+    this.toastr.success('', 'added to cart ');
+
   })
 }
 

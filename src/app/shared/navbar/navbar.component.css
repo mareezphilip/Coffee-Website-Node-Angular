@@ -4,7 +4,7 @@
 .bg-color{
     /* background-color: rgba(46, 38, 28, 0.668) !important; 
      */
-     background: rgba(19, 18, 15, 0.55) !important;
+     background: rgba(19, 18, 15, 0.7) !important;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.3) !important;
 }
 .text-brown{
@@ -13,7 +13,7 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .Logout-btn{
-    border:.2rem solid #443;
+    border:.2rem solid white;
    
     border-radius:95% 4% 97% 5% / 4% 94% 3% 95%;
 background-color: transparent;
@@ -21,7 +21,7 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 
 }
 .Logout-btn:hover{
- border:.2rem dashed #443;
+ border:.2rem dashed white;
      border-radius:4% 95% 6% 95% / 95% 4% 92% 5%;
 }
 
@@ -30,4 +30,9 @@ nav{
     position: fixed;
     top: 0;
     z-index: 2;
+}
+.bg-user{
+    background-color: #463d1b;
+    padding: 28%;
+
 }

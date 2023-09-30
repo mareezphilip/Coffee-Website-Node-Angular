@@ -1,0 +1,98 @@
+
+
+<div class="bg-img">
+    <div class="d-flex pt-5 container justify-content-evenly shadow-lg ">
+      <div class="" *ngIf="female; else elseBlock" >
+        <img src="assets/images/f2.png" alt="" class="">
+  
+      </div>
+     
+  <ng-template #elseBlock>
+          <img src="assets/images/m.png" alt="" class="">
+  
+  </ng-template>
+      <div class=" fs-5 ">
+          <h3 class="text-brown py-2 ">My Profile Information :</h3>
+        <div  class="py-2"> <span class="text-brown "> First Name is: </span> <span
+            class="text-brown-light">{{profileData?.fName|titlecase}}</span></div>
+        <div class="py-2"> <span class="text-brown">last Name is :</span> <span
+            class="text-brown-light">{{profileData?.lName|titlecase}}</span></div>
+        <div class="py-2"> <span class="text-brown">Email Address is :</span> <span
+            class="text-brown-light">{{profileData?.email|titlecase}}</span></div>
+        <div class="py-2"> <span class="text-brown">Country Code is :</span> <span
+            class="text-brown-light">{{profileData?.countryCode|titlecase}}</span></div>
+        <div class="py-2"> <span class="text-brown">phone is :</span> <span
+            class="text-brown-light">{{profileData?.phone|titlecase}}</span></div>
+        <div class="py-2"> <span class="text-brown">Gender is :</span> 
+          <span
+            class="text-brown-light">{{profileData?.gender|titlecase}}</span>
+          </div>
+          <div class="py-2"> <span class="text-brown">Date of Birthday is :</span> 
+            <span
+              class="text-brown-light">{{profileData?.dOfBirth|  date }}</span></div>  
+        <div class="py-2 pb-5"> <span class="text-brown">Addresses is :</span> 
+          <span class="text-brown-light">{{profileData?.addresses.addrType}}</span>
+          <span class="text-brown-light">{{profileData?.addresses.addrDetails}}</span></div>
+  
+      </div>
+  
+      <div class="align-self-end">
+        <div>
+            <button class="rounded-2  mb-2 px-4" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" (click)="getdata()">
+              Edit My Profile
+              <i class="fa-regular fa-pen-to-square" style="color: white;"></i>
+            </button>
+          </div>
+      
+          <div>
+            <button class="rounded-2  mb-5 px-3" type="button" routerLink="/auth">
+              ChangePassword
+              <i class="fa-regular fa-pen-to-square" style="color: white;"></i>
+            </button>
+          </div>
+            
+      </div>
+    
+
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-brown" id="exampleModalLabel">Edit My Profile</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             
+              <form  #editprofile="ngForm" (ngSubmit)="EditProfile(editprofile)">
+                <div class="mb-3">
+                  <label for="f-name" class="col-form-label">First Name:</label>
+                  <input type="text" class="form-control"  name="fName" [(ngModel)]="model.fName"  value="{{profileData.fName}}"> 
+                  
+                </div>
+                <div class="mb-3">
+                  <label for="l-name" class="col-form-label">Last Name:</label>
+                  <input type="text" class="form-control"  name="lName" [(ngModel)]="model.lName" #lName="ngModel" value="{{profileData.lName}}">
+                </div>
+              
+  
+                <div class="mb-3">
+                  <label for="phone" class="col-form-label">phone:</label>
+                  <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="model.phone"  value="{{profileData.phone}}">
+                </div>
+              
+               
+                <div class="modal-footer">
+                  <button type="button" class="rounded-2 px-4" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="rounded-2 px-4">Edit </button>
+                </div>
+              </form>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>

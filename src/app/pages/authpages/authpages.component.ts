@@ -25,10 +25,10 @@ this.reset=false
     
     
       }
-      showresetpass(){
+    showresetpass(){
         this.login=false
         this.register=false
         this.reset=true
         
-          }
+    }
 }

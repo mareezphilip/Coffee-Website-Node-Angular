@@ -1,3 +1,5 @@
+
+
 <div class="bg-img2">
 <div class="py-5 bg rounded-3 container m-auto w-50 mt-5">
     <h2 class="text-brown text-center pt-1">Coffee Shop</h2>
@@ -11,7 +13,7 @@
         Create new Account
       </p>
       <p class="col-4 text-brown" (click)="showresetpass()">
-        Reset my password
+        Change Password
       </p>
     </div>
     <hr class="text-brown">
@@ -25,9 +27,7 @@
         </app-register>
     </div>
     <div *ngIf="reset" >
-        <!-- <app-register>
-
-        </app-register> -->
+        <app-changepassword></app-changepassword>
     </div>
 </div>
   

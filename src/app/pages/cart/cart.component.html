@@ -1,1 +1,41 @@
-<p>cart works!</p>
+<div class="bg">
+
+    <div class="container"> 
+        <h1 class="text-brown" > Your Order </h1>
+
+        <table class="custom-table" >
+            <thead>
+              <tr class="h-60 headborder">
+                <th scope="col"> </th>
+                <th scope="col">Product </th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total price </th>
+                <th scope="col"> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of cartarr , let i =index ">
+                <td scope="row" class="thimg"> <div class="imgdiv"> <img src="http://localhost:5000{{product.img}}" class=" w-75 h-75"> </div> </td>
+                <td class=""> {{product.title}} </td>
+                <td class="px-2" > <button class="plusbtn" (click)="increaseQuantity(i)"> + </button> {{product.quantity}} <button class="plusbtn" (click)=" decreasequantity(i)"> - </button></td>
+                <td class="w-15">{{product.price * product.quantity}} LE</td>
+                <td> <button class="deletebtn rounded-pill px-4 py-2" (click)="handledelete(i)"> Delete </button> </td>
+              </tr>
+              <tr class="border-0 py-5">
+                <td><div class="imgdiv"> </div></td>
+                <td></td>
+                <td></td>
+                <td class="mt-5">{{totalprice}} LE </td>
+                <td> <button class="deletebtn rounded-pill px-4 py-2"> Order Now </button></td>
+              </tr>
+              
+            </tbody>
+        </table>
+    </div>
+
+   
+   
+   
+   
+
+</div>

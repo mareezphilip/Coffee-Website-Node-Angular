@@ -1,0 +1,35 @@
+.bg-img{
+    min-height: 150vh;
+    padding-top: 6rem;
+     background-image: url('/assets/images/5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+img{
+    width:50%;
+    height: 50%;
+    margin: 50px;
+    margin-right: -10px;
+}
+h3{
+    border-bottom: 2px solid rgb(56, 50, 22);
+}
+button{
+    background-color:rgb(105 78 43) ;
+    color: white;
+    height: 25%;
+}
+button:hover{
+    background-color: transparent;
+  
+    border: solid 1px rgb(48, 45, 42) ;
+    color: rgb(57, 46, 26);
+}
+button:hover i{
+    color: rgb(57, 46, 26) !important; 
+}
+.form-control:focus{
+    outline:  2px solid rgb(49, 49, 12) !important;
+    box-shadow: none !important;
+    border: none !important;
+}

@@ -1,5 +1,15 @@
 <div class="">
-    <h3 class="text-brown mb-5 " > {{category | titlecase}}</h3>
+    <div class="row justify-content-between">
+        <h3 class="text-brown mb-4 col-auto align-self-center" > {{category | titlecase}}</h3>
+        
+        <div class="align-self-center position-relative col-3 inputdiv">
+            <input type="search" class="form-control my-3 mb-5 w-100 " placeholder="search" [(ngModel)]="searchinput" (keyup)="search()" name="searchinput">
+            <i class="fa-solid fa-magnifying-glass position-absolute" style="color: #494e2973;"></i>
+        </div>
+        
+       
+    </div>
+    
     
     <div> 
         <img src="/assets/images/loading.gif" *ngIf="loading ; else show"  >

@@ -1,31 +1,33 @@
 <div class="bg">
 
     <div class="container">
-        <div class="row">
+        <div class="row margin">
             <div class="col-5">
                 <img src="http://localhost:5000{{product.images}}" class="ms-3"  >
              </div>
-            <div class="col-4"> 
-                <h2 class="text-brown pb-3"> {{product.title |titlecase}} </h2>
+            <div class="col-4 "> 
+                <h2 class="text-brown pb-3 w-100 mb-2"> {{product.title | titlecase}} </h2>
 
-                <p class="text-brown-light"> Description </p>
-                <p class=" text-brown-light descp p-4"> {{product.description}}</p>
-
-                
-                 <span class="text-brown fs-6 align-self-center d-inline-block me-6"> Price : </span>
-                 <span class="text-brown-light descp p-1 align-self-center d-inline-block ms-6 "> {{product.price}} LE </span>
-                
+                <div class="mt-4">
+                 <span class="text-brown fs-6"> Description </span>
+                 <p class=" text-brown-light descp p-4 mt-1"> {{product.description}}</p>
+                </div>
+                 <div class="row my-1"> 
+                 <span class="text-brown fs-6 align-self-center d-inline-block me-6 col-auto"> Price : </span>
+                 <span class="text-brown-light descp p-1 align-self-center d-inline-block ms-6 col-auto"> {{product.price}} LE </span>
+                </div>
               
+
                 <p class="text-brown"> Quantity </p>
-                <div class=""> 
-                   <button class="plusbtn" (click)="increaseQuantity()"> + </button>
-                   <span class="mx-3 fs-5 "> {{quantity}}</span>
-                   <button class="plusbtn" (click)="decreaseQuantity()"> - </button>
+                <div class="row"> 
+                   <button class="plusbtn col-auto" (click)="increaseQuantity()"> + </button>
+                   <span class="mx-3 fs-5 col-auto"> {{quantity}}</span>
+                   <button class="plusbtn col-auto" (click)="decreaseQuantity()"> - </button>
                     
                 </div>
 
 
-                <button class=" mt-4 btn rounded-pill orderbtn px-3 py-2" (click)="handleorder()"> Add to Order </button>
+                <button class=" mt-4 btn rounded-pill orderbtn px-4 py-2 fs-5" (click)="handleorder()"> Add to Order </button>
 
             </div>
             <div class="col-3"> 

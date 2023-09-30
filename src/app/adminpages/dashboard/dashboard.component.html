@@ -1,10 +1,10 @@
-<div class="d-flex">
-  <div class=" bg-brown ps-2 ">
+<div class="row gx-0">
+  <div class="col-3 bg-brown ps-2 ">
     <h3 class="mt-3 " >Dashboard</h3>
     <hr>
     
-    <h6 class="py-3" routerLink="/dashboard/addnewproduct">Add products</h6>
-    <h6 class="py-3"routerLink="/dashboard/editproduct" >Edit product</h6>
+    <h6 class="py-3" (click)="addproducthandle()">Add products</h6>
+    <h6 class="py-3" (click)="editproducthandle()" >Edit product</h6>
     
 
 
@@ -14,8 +14,11 @@
 
 
   </div>
-  <div class="  ">
-content
+  <div class="col-9 ps-3 py-3">
+    <app-addnewproduct *ngIf="addproduct"></app-addnewproduct>
+    <app-edit-product *ngIf="editproduct"></app-edit-product>
+
+
 
   </div>
 

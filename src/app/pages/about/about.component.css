@@ -1,0 +1,32 @@
+.bg{
+    
+    padding-top: 6rem;
+     
+    background-image: url('/assets/images/5.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.image-container {
+    overflow: hidden;
+  }
+  
+ img {
+    width: 80%;
+    height: 80%;
+    
+    transform: translateX(-100%);
+    animation: slide-in 3s ease-in-out forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(90%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .border-brown{
+    border-color: #694e2b !important;
+  }

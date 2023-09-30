@@ -10,9 +10,12 @@ import { GlobalserviceService } from 'src/app/services/globalservice.service';
 })
 export class ProductsComponent {
 
+ 
   constructor(private activate:ActivatedRoute , private service:GlobalserviceService ,private router: Router ){}
   category : any =""
   products :any
+  searchinput =""
+  tempproduct :any
   loading = true
   p :any = "mareeeeeez"
   ngOnInit(){
@@ -22,6 +25,7 @@ export class ProductsComponent {
     this.service.getproductsbycategory(this.category).subscribe(res=>{
       console.log(res)
       this.products =res.data
+      this.tempproduct=res.data
       
     }
      , (error)=>{
@@ -35,5 +39,16 @@ export class ProductsComponent {
 
   })
  
+
+}
+
+search(){
+  console.log(this.searchinput)
+  
+  this.products = this.products.filter((p:any) => p.title.includes(this.searchinput)) 
+  
+  if(this.products.length == 0 ) { this.products =[]}
+  if(this.searchinput == "") {this.products = this.tempproduct}
+  console.log(this.products)
 }
 }

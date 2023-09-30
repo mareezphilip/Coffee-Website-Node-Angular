@@ -14,24 +14,29 @@ import { EditProductComponent } from './adminpages/edit-product/edit-product.com
 import { DeleteproductComponent } from './adminpages/deleteproduct/deleteproduct.component';
 import { AllusersComponent } from './adminpages/allusers/allusers.component';
 import { AddadminComponent } from './adminpages/addadmin/addadmin.component';
-
+import { canActivateGuard } from './guards/can-activate.guard';
+import { CartComponent } from './pages/cart/cart.component';
+import { ShowprofileComponent } from './pages/showprofile/showprofile.component';
 
 const routes: Routes = [
   {path: "products/hot%20Coffee" ,component:HomeComponent},
-  
+  {path: "" , redirectTo:"products/hot%20Coffee" , pathMatch:'full'},
   {path:"about",component:AboutComponent},
-  {path:"review",component:ReviewComponent},
+  {path:"review" , component:ReviewComponent},
+  {path: "cart" , component:CartComponent},
   {path:"products/:category" , component:HomeComponent},
   {path:"products/:category/:productid" , component:ShowproductComponent},
   {path:"auth",component:AuthpagesComponent},
   {path:"error" , component:ErrorComponent},
-  {path:"dashboard" , component:DashboardComponent},
+  {path:"dashboard" , component:DashboardComponent , },
   {path:"dashboard/addnewproduct" , component:AddnewproductComponent},
   {path:"dashboard/editproduct" , component:EditProductComponent},
   {path:"dashboard/delete" , component:DeleteproductComponent},
   {path:"dashboard/allusers" , component:AllusersComponent},
   {path:"dashboard/addadmin" , component:AddadminComponent},
+  {path:"myprofile" , component:ShowprofileComponent}
 
+  // canActivate:[canActivateGuard]
 
 
 

@@ -33,6 +33,9 @@ import { EditProductComponent } from './adminpages/edit-product/edit-product.com
 import { DeleteproductComponent } from './adminpages/deleteproduct/deleteproduct.component';
 import { AllusersComponent } from './adminpages/allusers/allusers.component';
 import { AddadminComponent } from './adminpages/addadmin/addadmin.component';
+import { AddreviewComponent } from './components/addreview/addreview.component';
+import { ShowprofileComponent } from './pages/showprofile/showprofile.component';
+import { ChangepasswordComponent } from './pages/auth/changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { AddadminComponent } from './adminpages/addadmin/addadmin.component';
     DeleteproductComponent,
     AllusersComponent,
     AddadminComponent,
+    AddreviewComponent,
+    ShowprofileComponent,
+    ChangepasswordComponent,
    
     
   ],
